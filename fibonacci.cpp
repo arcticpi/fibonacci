@@ -21,9 +21,15 @@ int main(int argc, char* argv[])
         std::cout << "usage : fibonacci.exe <number>" << std::endl;
         return -1;
     }
-    else
+    
+    int n = std::atoi(argv[1]);
+
+    for (int i = 0; i < n; i++)
     {
-        int n = std::atoi(argv[1]);
-        std::cout << fibonacci(n) << std::endl;
+        std::cout << fibonacci(i) << " ";
     }
+
+    std::cout << fibonacci(n) << std::endl;
+
+    return 0;
 }
